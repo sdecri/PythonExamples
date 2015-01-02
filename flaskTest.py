@@ -27,7 +27,7 @@ def methodType():
 
 
 def main():
-    app.run(debug=True)
+    app.run(debug=True,host='172.16.3.171')# default host=localhost, default port=5000
 
 if __name__=='__main__':
     main()
