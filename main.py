@@ -2,6 +2,7 @@ __author__ = 'Simone'
 
 from Person import  *
 from postgresql import *
+import sys
 
 def main():
     p1 = Person('simone','de cristofaro',29)

@@ -7,7 +7,9 @@ import sys
 def writePersonOnDb(persons):
     conn=None
     try:
-        conn = psycopg2.connect("dbname='python_test' user='postgres' host='localhost' password='postgres'")
+        conn = psycopg2.connect(host='127.0.0.1', port='5433', database='postgres',
+                                                   user='postgres',
+                                                   password='postgres')
         cursor=conn.cursor()
         cursor.execute("CREATE TABLE IF NOT EXISTS persons"
         + "(name character varying(255), surname character varying(255), age integer) ")
@@ -24,3 +26,4 @@ def writePersonOnDb(persons):
     finally:
         if conn:
             conn.close()
+
